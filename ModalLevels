@@ -1,0 +1,25 @@
+<script>
+             var $html = $(document.documentElement);
+var $modal = $('.modal-container');
+function showModal() {
+  $html.css('overflow', 'hidden');
+  $modal.show().css('overflow', 'auto');
+}
+function hideModal() {
+    $html.css('overflow', 'visible');
+    $modal.show().css('overflow','visible')
+}
+$('.modal-btn').on('click', showModal);
+$('.modal-close').on('click', hideModal);
+            </script>
+            <script>
+             var $('html').click(function() {
+  $('.popup').hide();
+});
+$('.popup-btn-close').click(function(e){
+  $(this).parent().hide();
+});
+$('.popup').click(function(e){
+  e.stopPropagation();
+});
+            </script>
